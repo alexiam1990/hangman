@@ -1,5 +1,0 @@
-module hangman {
-	
-	//test2
-	
-}
