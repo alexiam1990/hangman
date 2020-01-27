@@ -1,6 +1,7 @@
 package com.java.curso;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class hangman {
 
@@ -14,16 +15,25 @@ public class hangman {
 //		System.out.println("Bienvenido al juego del ahorcado.");
 //		System.out.println("Elija su opción:");
 //		System.out.println("");
-		
-		//Chose random word
+
+		// Chose random word
 		int randomNumber = r.nextInt(WORDS.length);
-		System.out.println(WORDS[randomNumber]);
+		String randomWord = WORDS[randomNumber];
+		System.out.println(randomWord);
+
+		// Input word
+		// int guessWord = ()
+		System.out.println("Intente adivinar la palabra:");
+		String guessWord = sc.nextLine();
+				
 		
-		//Input word
-	//	int guessWord = sc
-		String nombre = sc.nextLine();
-		
-		
+
+		if (guessWord.equals(randomWord)) {
+			System.out.println("Acertaste: " + randomWord);
+		} else {
+			System.out.println("Fallaste: " + randomWord + "\nDijiste: " + guessWord);
+		}
+
 		printHangman.state_0();
 
 	}
